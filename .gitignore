@@ -1,0 +1,13 @@
+# SO
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+
+# Builds
+dist/
+build/
+
+# Logs
+*.log
