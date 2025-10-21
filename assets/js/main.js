@@ -1,19 +1,18 @@
-/* Back-to-top visible al hacer scroll */
-const backTop = document.querySelector('.back-to-top');
+/* Back to top visible al hacer scroll y scroll suave */
+(function () {
+  const backTop = document.querySelector('.back-to-top');
+  const showAt = 280;
 
-window.addEventListener('scroll', () => {
-  const show = window.scrollY > 320;
-  backTop.classList.toggle('show', show);
-});
+  const onScroll = () => {
+    if (window.scrollY > showAt) {
+      backTop.classList.add('is-visible');
+    } else {
+      backTop.classList.remove('is-visible');
+    }
+  };
 
-backTop.addEventListener('click', () => {
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-});
+  const toTop = () => window.scrollTo({ top: 0, behavior: 'smooth' });
 
-/* (Opcional) marca el link activo de navegación si lo necesitas */
-document.querySelectorAll('.nav__link').forEach(a => {
-  a.addEventListener('click', e => {
-    document.querySelectorAll('.nav__link').forEach(x => x.classList.remove('is-active'));
-    e.currentTarget.classList.add('is-active');
-  });
-});
+  document.addEventListener('scroll', onScroll, { passive: true });
+  backTop.addEventListener('click', toTop);
+})();

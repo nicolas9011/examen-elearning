@@ -1,124 +1,86 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>eLEARNING • Home</title>
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>eLEARNING</title>
+    <meta name="author" content="Nicolás Barbosa" />
+    <meta name="keywords" content="elearning, courses, education" />
+    <meta name="description" content="Landing eLearning (examen CSS/HTML/BEM/Bootstrap-like)" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+  </head>
 
-  <!-- Metas requeridos por el profe -->
-  <meta name="author" content="Nicolás Barbosa" />
-  <meta name="keywords" content="elearning, courses, education, online" />
-  <meta name="description" content="Modern eLearning landing page — hero demo" />
+  <body id="top">
+    <!-- Header / Navbar -->
+    <header class="header">
+      <div class="container header__inner">
+        <a href="#" class="brand" aria-label="eLearning home">
+          <span class="brand__dot" aria-hidden="true"></span>
+          <span class="brand__text">eLEARNING</span>
+        </a>
 
-  <!-- Fuente -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+        <nav class="nav" aria-label="primary">
+          <ul class="nav__list">
+            <li class="nav__item"><a class="nav__link nav__link--active" href="#">Home</a></li>
+            <li class="nav__item"><a class="nav__link" href="#">About</a></li>
+            <li class="nav__item"><a class="nav__link" href="#">Courses</a></li>
+            <li class="nav__item nav__item--dropdown">
+              <a class="nav__link" href="#">Pages</a>
+              <span class="nav__chev" aria-hidden="true">▾</span>
+            </li>
+            <li class="nav__item"><a class="nav__link" href="#">Contact</a></li>
+          </ul>
+        </nav>
 
-  <!-- Estilos -->
-  <link rel="stylesheet" href="assets/css/main.css">
-</head>
-<body>
-
-  <!-- Header -->
-  <header class="site-header">
-    <div class="container header__row">
-      <a href="#" class="brand" aria-label="eLearning home">
-        <span class="brand__icon" aria-hidden="true"></span>
-        <span class="brand__text">eLEARNING</span>
-      </a>
-
-      <nav class="nav" aria-label="Main">
-        <ul class="nav__list">
-          <li><a class="nav__link is-active" href="#">Home</a></li>
-          <li><a class="nav__link" href="#">About</a></li>
-          <li><a class="nav__link" href="#">Courses</a></li>
-          <li class="nav__group">
-            <button class="nav__link nav__dropdown" type="button" aria-expanded="false" aria-haspopup="true">
-              Pages
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-            </button>
-          </li>
-          <li><a class="nav__link" href="#">Contact</a></li>
-        </ul>
-      </nav>
-
-      <a href="#" class="btn btn--primary">Join Now</a>
-    </div>
-  </header>
-
-  <!-- HERO -->
-  <section class="hero" role="banner" aria-label="Primary hero">
-    <div class="hero__bg" role="img" aria-label="Student with graduation cap"></div>
-
-    <div class="container hero__content">
-      <p class="eyebrow">BEST ONLINE COURSES</p>
-
-      <h1 class="hero__title">
-        Get Educated<br>
-        Online From Your<br>
-        Home
-      </h1>
-
-      <p class="hero__lead">
-        Vero elitr justo clita lorem. Ipsum dolor at sed stet sit diam no. Kasd
-        rebun ipsum et diam justo clita et kasd rebun sea sanctus eirmod elitr.
-      </p>
-
-      <div class="hero__cta">
-        <a href="#" class="btn btn--teal">Read More</a>
-        <a href="#" class="btn btn--ghost">Join Now</a>
+        <a href="#" class="btn btn--pill header__cta">
+          Join Now
+          <img class="btn__icon" src="assets/icons/arrow-right.svg" alt="" />
+        </a>
       </div>
-    </div>
+    </header>
 
-    <!-- Flechas del hero -->
-    <div class="hero__nav" aria-label="Hero controls">
-      <button class="hero__nav-btn" aria-label="Previous">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-          <path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-      </button>
-      <button class="hero__nav-btn" aria-label="Next">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-          <path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-      </button>
-    </div>
-  </section>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="hero__bg" role="img" aria-label="Student with graduation cap"></div>
+      <div class="hero__overlay"></div>
 
-<!-- Back to top -->
-<a id="backToTop" class="back-to-top" href="#" aria-label="Back to top" title="Back to top">
-  <!-- SVG inline (no depende de archivos) -->
-  <svg viewBox="0 0 24 24" aria-hidden="true">
-    <path d="M12 5l-7 7h4v7h6v-7h4z"></path>
-  </svg>
-</a>
+      <div class="container hero__inner">
+        <div class="hero__content">
+          <p class="eyebrow">Best Online Courses</p>
 
-<!-- Script para mostrar/ocultar y hacer scroll suave -->
-<script>
-  (function () {
-    const btn = document.getElementById('backToTop');
+          <h1 class="hero__title">
+            Get Educated<br />
+            Online From Your<br />
+            Home
+          </h1>
 
-    // Mostrar cuando se baja 300px
-    const onScroll = () => {
-      if (window.scrollY > 300) btn.classList.add('show');
-      else btn.classList.remove('show');
-    };
+          <p class="hero__lead">
+            Vero elitr justo clita lorem. Ipsum dolor at sed stet sit diam no. Kasd rebum ipsum et diam justo clita
+            et kasd rebum sea sanctus eirmod elitr.
+          </p>
 
-    // Subir con scroll suave
-    const onClick = (e) => {
-      e.preventDefault();
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    };
+          <div class="hero__ctas">
+            <a href="#" class="btn btn--primary">Read More</a>
+            <a href="#" class="btn btn--ghost">Join Now</a>
+          </div>
+        </div>
 
-    window.addEventListener('scroll', onScroll, { passive: true });
-    btn.addEventListener('click', onClick);
-    // Estado inicial
-    onScroll();
-  })();
-</script>
+        <div class="hero__slider-nav" aria-label="hero navigation">
+          <button class="slider-btn" aria-label="Previous">
+            <img src="assets/icons/arrow-left.svg" alt="" />
+          </button>
+          <button class="slider-btn" aria-label="Next">
+            <img src="assets/icons/arrow-right.svg" alt="" />
+          </button>
+        </div>
+      </div>
+    </section>
 
+    <!-- Back to top -->
+    <button class="back-to-top" aria-label="Back to top">
+      <img src="assets/icons/chevron-up.svg" alt="" />
+    </button>
 
-  <script src="assets/js/main.js"></script>
-</body>
+    <script src="assets/js/main.js"></script>
+  </body>
 </html>
